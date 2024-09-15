@@ -42,15 +42,26 @@ function App() {
     };
     searchHandle();
   }, [searcharray]);
-  console.log(searcharray);
-  const handleChange = (e) => {
-    setHint(e.target.value);
+
+  const handleChange = (event) => {
+      setHint(event.target.value);
+  };
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log(e.target.elements[0]);
+      e.target.elements[0].value = hint;  
   };
   return (
     <>
-      <Input handleChange={handleChange} hint={hint} />
+      <Input
+        handleChange={handleChange}
+        hint={hint}
+        submitHandler={submitHandler}
+      />
     </>
   );
 }
 
 export default App;
+
+

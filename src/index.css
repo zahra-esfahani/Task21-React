@@ -5,33 +5,47 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: rgba(105, 105, 105, 0.702);
 }
 
-.input {
+ .input {
   position: relative;
   width: 250px;
   margin: 20px auto;
+  margin-top: 150px;
 }
 
-.input input {
+ .input input {
   width: 100%;
   font-size: 30px;
+  border-radius: 5px;
+  border: 2px solid black;
   z-index: 2;
   padding-left: 5px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif3;
 }
+.input input:focus{
+outline: none;
+}
 
 .input label {
   position: absolute;
   left: 7px;
   top: 0;
-  bottom: 0;
+  bottom: 0px;
   font-size: 30px;
   opacity: 0.3;
   z-index: 1;
   user-select: none;
   display: flex;
   align-items: center;
+}  
+.label{
+  opacity: 1;
+}
+.input button{
+  display: none;
 }

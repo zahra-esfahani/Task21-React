@@ -1,18 +1,14 @@
-/* eslint-disable react/prop-types */
-const Input = ({handleChange, hint}) => {
+
+const Input = ({ handleChange, hint, submitHandler, hintOpacity}) => {
   return (
-    <div className="input">
-      <label htmlFor="input" >
+    <form className="input" onSubmit={submitHandler}>
+      <label htmlFor="input" className={hintOpacity===1  ? "label" : null}>
         {hint}
       </label>
-      <input
-        type="text"
-        id="input"
-        onChange={handleChange}
-      />
-    </div>
+      <input type="text" id="input" onChange={handleChange} />
+      <button type="submit"></button>
+    </form>
   );
 };
 
 export default Input;
-
